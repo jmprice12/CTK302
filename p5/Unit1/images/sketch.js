@@ -1,7 +1,7 @@
 
 var img1, img2,img3;
 function setup() {
-  createCanvas(800,800);
+  createCanvas(1000,800);
 
 img1=loadImage("assets/1.jpg");
 img2=loadImage("assets/2.JPG");
