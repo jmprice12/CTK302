@@ -2,22 +2,24 @@ var f;
 var f2;
 
 function setup() {
-createCanvas(1000,1000);
+createCanvas(2000,1000);
 f=loadFont("assets/l.ttf");
 f2=loadFont("assets/b.ttf");
 textAlign(CENTER);
 }
 
 function draw() {
-background (100);
+background ("#B3B7C0");
+fill("#0A0942");
 textFont(f);
-textSize(10);
-text("I solemnly swear that i'm up to no good", width/2, height/2);
+textSize(25);
+text("It is the quality of one’s", 900,500);
+text("convictions that determines success,", 900,600);
+text("not the number of followers.", 900,700);
 
 textFont(f2);
 textSize(100);
-text("Leslie Knope", );
+text("-Remus Lupin", 1000,900);
 
-text(mouseX + " " + mouseY, 166, 792);
 }
 // second font with quote
