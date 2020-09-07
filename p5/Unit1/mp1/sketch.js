@@ -1,13 +1,17 @@
 var f;
 
+
 function setup() {
   createCanvas(1200, 400);
-  f=loadFont("fonts/assets/o.ttf");
+
+  f = loadFont("fonts/assets/o.ttf");
 
 
 }
 
+
 function draw() {
+
 
   background("#a3aeba");
   if (mouseIsPressed) {
@@ -37,7 +41,7 @@ function draw() {
     textFont(f);
     textSize(100);
     text("By day Ollie is your typical adorable dog, traveling the community greeting his friendly neighbors.", 100, 343);
-    }
+  }
 
 
   //body
@@ -127,45 +131,87 @@ function draw() {
   fill("#1b1c17");
   ellipse(408, 319, 2, 10);
 
+  //house right
+  fill("#DBD3BE")
+  rect(970, 75, 200, 200);
+  fill("#7C311D")
+  triangle(951, 80, 1067, 7, 1190, 80);
+  //door
+  fill("#7C311D")
+  rect(1033, 144, 75, 130);
+  fill("black")
+  ellipse(1094, 215, 15, 15);
+
+  //house middle
+  fill("#DBD3BE")
+  rect(686, 75, 200, 200);
+  fill("#7C311D")
+  triangle(670, 80, 783, 7, 896, 80);
+  //door
+  fill("#7C311D")
+  rect(745, 145, 75, 130);
+  fill("black")
+  ellipse(807, 216, 15, 15);
+
   // Code for smile https://editor.p5js.org/andrewurodov/sketches/HypyqUQ5-
   //smile
   noFill();
   stroke(0, 0, 0);
   arc(321, 209, 50, 50, 0, PI);
   //mask
-    if (mouseIsPressed) {
-      fill("#7C311D")
-      //(x,y,w,h)
-      rect(251, 153, 150, 35);
-      //left eye
-      fill("white")
-      ellipse(296, 168, 25, 25);
-      //cute left eye
-      fill("#1b1c17")
-      ellipse(296, 168, 18, 18);
-      //cute right eye
-      fill("white")
-      ellipse(344, 168, 25, 25);
-      fill("#1b1c17")
-      ellipse(344, 168, 18, 18);
+  if (mouseIsPressed) {
+    fill("#7C311D")
+    //(x,y,w,h)
+    rect(251, 153, 150, 35);
+    //left eye
+    fill("white")
+    ellipse(296, 168, 25, 25);
+    //cute left eye
+    fill("#1b1c17")
+    ellipse(296, 168, 18, 18);
+    //cute right eye
+    fill("white")
+    ellipse(344, 168, 25, 25);
+    fill("#1b1c17")
+    ellipse(344, 168, 18, 18);
 
-      fill("#7C311D")
-      noStroke();
-      rect(251, 153, 150, 12);
-  // mouth
+    fill("#7C311D")
+    noStroke();
+    rect(251, 153, 150, 12);
+    // mouth
 
-    //  fill("black");
-    //  rect(290, 208, 65, 30);
-      //L tooth
-      noStroke();
-      //fill("white");
-      //triangle(290, 208,309,208,300,221);
+    fill("black");
+    rect(290, 208, 65, 30);
+    //top L tooth
+    noStroke();
+    fill("white");
+    triangle(290, 208, 309, 208, 300, 221);
 
-      //L tooth
-      noStroke();
-      //fill("white");
-      //triangle(309,208,326,208,315,221);
-    }
+    //L tooth
+    noStroke();
+    fill("white");
+    triangle(309, 208, 328, 208, 315, 221);
+    //R tooth
+    noStroke();
+    fill("white");
+    triangle(326, 208, 354, 208, 338, 221);
+
+    //bottom left tooth
+    noStroke();
+    fill("white");
+    triangle(290, 238, 302, 229, 308, 238);
+    //bottom middle tooth
+    noStroke();
+    fill("white");
+    triangle(308, 238, 320, 229, 330, 238);
+    //bottom right tooth
+    noStroke();
+    fill("white");
+    triangle(329, 238, 338, 229, 354, 238);
+
+
+
+  }
 
   text(mouseX + ', ' + mouseY, 329, 80);
 
