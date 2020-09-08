@@ -6,7 +6,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
   song1.loop();
 }
 
@@ -16,10 +16,10 @@ function draw() {
 }
 
 function mouseReleased() {
-  if (song1. isPlaying()) {
-    song1. pause();
+  if (song1.isPlaying()) {
+    song1.pause();
   } else {
-    song1. loop();
+    song1.loop();
 
   }
 }
