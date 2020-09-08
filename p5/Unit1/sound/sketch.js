@@ -7,7 +7,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 800);
-  song1.loop();
+  song1.play();
 }
 
 function draw() {
@@ -19,7 +19,11 @@ function mouseReleased() {
   if (song1.isPlaying()) {
     song1.pause();
   } else {
-    song1.loop();
+    song1.play();
 
   }
+}
+
+function touchStarted() {
+  getAudioContext().resume();
 }
