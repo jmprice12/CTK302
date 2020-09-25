@@ -5,7 +5,7 @@ let song1, song2, song3;
 
 function preload() {
   song1 = loadSound("assets/weird.mp3");
-  song2 = loadSound("assets/c.mp3");
+  song2 = loadSound("assets/hall.mp3");
   song3 = loadSound("assets/mb.mp3");
 
 
