@@ -1,5 +1,5 @@
 let numberOfTouches = 0 ;
-var img1, img2, img3, img4;
+var img1, img2, img3, img4, img5;
 
 function setup() {
   createCanvas(500, 500);
@@ -7,6 +7,7 @@ function setup() {
   img2 = loadImage("assets/o22.JPG");
   img3 = loadImage("assets/o3.JPG");
   img4 = loadImage("assets/o2.jpeg");
+  img5 = loadImage("assets/05.JPG");
   imageMode(CENTER);
 }
 
@@ -34,8 +35,14 @@ function draw() {
       break ;
 
       case 3:
-     text("OHHH YEAH!! I love you forever! ", 5, 22) ;
+     text("OHHH YEAH!! I love you forever keep it up! ", 5, 22) ;
      image(img4, width / 2, height / 2, 400 ,400 );
+            // put a picture here
+      break ;
+
+      case 4:
+     text("wait don't stop! ", 5, 22) ;
+     image(img5, width / 2, height / 2, 400 ,400 );
             // put a picture here
       break ;
 
