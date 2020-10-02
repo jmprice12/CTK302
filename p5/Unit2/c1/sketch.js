@@ -1,17 +1,14 @@
+var x = 0 ;
+var velocity = 0 ;
 var mic;
-var vol = 0;
-var c = '#d68571';
-var img1;
+var vol;
+var c = '#d8d9de';
 
 function setup() {
   createCanvas(400, 400);
   rectMode(CENTER);
 
   // code for initializing mic in.
-  //activates mic
-  //need to use mic imput us it put in set up NOT draw
-  img1 = loadImage("assets/cat.png");
-  imageMode(CENTER);
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -19,20 +16,20 @@ function setup() {
 
 function draw() {
   background(c);
-  // image(myimage 0,0)
+  fill('#f3b54a');
+  rect(x, 300, 75, 70);
+  x = x + velocity;
+
+
   // get the sound input
   vol = (mic.getLevel()).toFixed(2); // returned level is between 0 and 1
-
+  velocity = 0;
   // check how loud the input is
-  if (vol > .20) {
-    background("#829891")
-    image(img1, width / 2, height / 2, 200, 200); // if the volume is LOUD?
-
-    // do something
-    c = color(random(255), random(255), random(255)); // here I'm setting the background to a random color
-    // could move it to another state
-
+  if (vol > .01) {
+    velocity = 10;
   }
+
+  if (x>width) x=0;
 
   // extra stuff for debugging
   textSize(18);
