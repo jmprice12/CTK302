@@ -7,7 +7,7 @@ function setup() {
   img2 = loadImage("assets/o22.JPG");
   img3 = loadImage("assets/o3.JPG");
   img4 = loadImage("assets/o2.jpeg");
-  img5 = loadImage("assets/05.JPG");
+  img5 = loadImage("assets/o5.JPG");
   imageMode(CENTER);
 }
 
