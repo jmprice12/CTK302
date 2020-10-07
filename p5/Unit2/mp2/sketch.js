@@ -74,7 +74,7 @@ function draw() {
       song1.pause();
 
       timer++; //multiply is *
-      if (timer > 5 * 30) {
+      if (timer > 5 * 60) {
         state = 5;
       }
       break;
@@ -84,7 +84,7 @@ function draw() {
       image(img4, width / 2, height / 2, 1000, 800);
       //text("case 3", 250, 250);
       song1.pause();
-      if (vol > .02) {
+      if (vol > .03) {
         state = 6
         break;
 
