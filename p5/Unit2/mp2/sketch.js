@@ -17,6 +17,7 @@ function setup() {
   mic.start();
 
 
+
   img1 = loadImage("assets/0.png");
   img2 = loadImage("assets/1.png");
   img3 = loadImage("assets/2.png");
@@ -39,7 +40,7 @@ function draw() {
       text("case 0", 250, 250);
       state = 0;
       song1.pause();
-    
+
 
       break;
 
@@ -63,7 +64,6 @@ function draw() {
 
     case 3:
       image(img2, width / 2, height / 2, 1000, 800);
-
       break;
 
 
@@ -71,8 +71,9 @@ function draw() {
       image(img3, width / 2, height / 2, 1000, 800);
       text("case 2", 250, 250);
       song1.pause();
+
       timer++; //multiply is *
-      if (timer > 5 * 40) {
+      if (timer > 5 * 30) {
         state = 5;
       }
       break;
