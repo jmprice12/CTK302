@@ -32,7 +32,7 @@ function draw() {
 
 
     case 0:
-    
+
       image(img1, width / 2, height / 2, 1000, 800);
       state = 0;
       song1.pause();
