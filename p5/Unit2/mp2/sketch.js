@@ -40,8 +40,6 @@ function draw() {
       text("case 0", 250, 250);
       state = 0;
       song1.pause();
-
-
       break;
 
 
@@ -55,7 +53,7 @@ function draw() {
     case 2:
       image(img2, width / 2, height / 2, 1000, 800);
       text("case 1", 250, 250);
-      timer = 0;
+  
       song1.pause();
 
       state = 2;
@@ -112,7 +110,7 @@ function mouseReleased() {
   state++; // state= state+1
   if (state > 6) {
     state = 0;
-    
+
   }
 }
 
