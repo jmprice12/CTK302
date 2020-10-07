@@ -1,5 +1,4 @@
-let state = 0;
-let img1, img2, img3, img4, img5, img6;
+var img1, img2, img3, img4, img5, img6;
 timer = 0;
 state = 0;
 var mic;
@@ -26,9 +25,11 @@ function setup() {
   img6 = loadImage("assets/4b.png");
 
   imageMode(CENTER);
+
 }
 
 function draw() {
+
   vol = (mic.getLevel()).toFixed(2); // returned level is between 0 and 1
   switch (state) { //needs nested  curly brackets
 
@@ -38,24 +39,33 @@ function draw() {
       text("case 0", 250, 250);
       state = 0;
       song1.pause();
+    
+
       break;
+
 
 
     case 1:
       image(img1, width / 2, height / 2, 1000, 800);
+
       break;
 
 
     case 2:
       image(img2, width / 2, height / 2, 1000, 800);
       text("case 1", 250, 250);
+      timer = 0;
       song1.pause();
+
       state = 2;
       break;
 
+
     case 3:
       image(img2, width / 2, height / 2, 1000, 800);
+
       break;
+
 
     case 4:
       image(img3, width / 2, height / 2, 1000, 800);
@@ -102,8 +112,9 @@ function mouseReleased() {
   if (state > 6) {
     state = 0;
   }
-
 }
+
+
 
 function touchStarted() {
   getAudioContext().resume();
