@@ -55,7 +55,7 @@ function draw() {
 
     case 2:
       image(img2, width / 2, height / 2, 1000, 800);
-      text("case 1", 250, 250);
+      //text("case 1", 250, 250);
       timer = 0;
       song1.pause();
 
@@ -70,7 +70,7 @@ function draw() {
 
     case 4:
       image(img3, width / 2, height / 2, 1000, 800);
-      text("case 2", 250, 250);
+      //text("case 2", 250, 250);
       song1.pause();
 
       timer++; //multiply is *
@@ -82,7 +82,7 @@ function draw() {
 
     case 5:
       image(img4, width / 2, height / 2, 1000, 800);
-      text("case 3", 250, 250);
+      //text("case 3", 250, 250);
       song1.pause();
       if (vol > .02) {
         state = 6
@@ -93,7 +93,7 @@ function draw() {
       break;
     case 6:
       image(img6, width / 2, height / 2, 1000, 800);
-      text("case 4", 250, 250);
+      //text("case 4", 250, 250);
       state = 6
       //https://www.youtube.com/watch?v=40Me1-yAtTc
       if (!song1.isPlaying()) {
