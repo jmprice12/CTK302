@@ -112,6 +112,7 @@ function mouseReleased() {
   state++; // state= state+1
   if (state > 6) {
     state = 0;
+    
   }
 }
 
