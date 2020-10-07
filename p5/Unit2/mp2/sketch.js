@@ -6,6 +6,7 @@ var mic;
 var vol = 0;
 var song1;
 
+
 function preload() {
   song1 = loadSound("assets/l.mp3");
 }
@@ -15,6 +16,7 @@ function setup() {
   textSize(24);
   mic = new p5.AudioIn();
   mic.start();
+
 
   img1 = loadImage("assets/0.png");
   img2 = loadImage("assets/1.png");
@@ -39,9 +41,9 @@ function draw() {
       break;
 
 
-      case 1:
-        image(img1, width / 2, height / 2, 1000, 800);
-        break;
+    case 1:
+      image(img1, width / 2, height / 2, 1000, 800);
+      break;
 
 
     case 2:
@@ -51,9 +53,9 @@ function draw() {
       state = 2;
       break;
 
-      case 3:
-        image(img2, width / 2, height / 2, 1000, 800);
-        break;
+    case 3:
+      image(img2, width / 2, height / 2, 1000, 800);
+      break;
 
     case 4:
       image(img3, width / 2, height / 2, 1000, 800);
@@ -98,7 +100,7 @@ function mouseReleased() {
 
   state++; // state= state+1
   if (state > 6) {
-     state = 0;
+    state = 0;
   }
 
 }
