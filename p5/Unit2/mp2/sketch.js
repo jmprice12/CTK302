@@ -12,6 +12,7 @@ function preload() {
 
 function setup() {
   createCanvas(1000, 800);
+
   textSize(24);
   mic = new p5.AudioIn();
   mic.start();
@@ -37,7 +38,7 @@ function draw() {
 
     case 0:
       image(img1, width / 2, height / 2, 1000, 800);
-      text("case 0", 250, 250);
+      //text("case 0", 250, 250);
       state = 0;
       song1.pause();
 
