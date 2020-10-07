@@ -32,35 +32,37 @@ function draw() {
 
 
     case 0:
+    
       image(img1, width / 2, height / 2, 1000, 800);
-      
       state = 0;
       song1.pause();
       break;
 
 
-      case 1:
-        image(img1, width / 2, height / 2, 1000, 800);
-        break;
+    case 1:
+      image(img1, width / 2, height / 2, 1000, 800);
+      state = 1;
+      break;
 
 
     case 2:
       image(img2, width / 2, height / 2, 1000, 800);
-
       song1.pause();
       state = 2;
       break;
 
-      case 3:
-        image(img2, width / 2, height / 2, 1000, 800);
-        break;
+    case 3:
+      image(img2, width / 2, height / 2, 1000, 800);
+      break;
+      state = 2;
 
     case 4:
       image(img3, width / 2, height / 2, 1000, 800);
+      state = 4;
 
       song1.pause();
       timer++; //multiply is *
-      if (timer > 5 * 60) {
+      if (timer > 5 * 40) {
         state = 5;
       }
       break;
