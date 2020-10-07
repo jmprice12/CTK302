@@ -32,34 +32,32 @@ function draw() {
 
 
     case 0:
-
       image(img1, width / 2, height / 2, 1000, 800);
+      text("case 0", 250, 250);
       state = 0;
       song1.pause();
       break;
 
 
-    case 1:
-      image(img1, width / 2, height / 2, 1000, 800);
-      state = 1;
-      break;
+      case 1:
+        image(img1, width / 2, height / 2, 1000, 800);
+        break;
 
 
     case 2:
       image(img2, width / 2, height / 2, 1000, 800);
+      text("case 1", 250, 250);
       song1.pause();
       state = 2;
       break;
 
-    case 3:
-      image(img2, width / 2, height / 2, 1000, 800);
-      break;
-      state = 2;
+      case 3:
+        image(img2, width / 2, height / 2, 1000, 800);
+        break;
 
     case 4:
       image(img3, width / 2, height / 2, 1000, 800);
-      state = 4;
-
+      text("case 2", 250, 250);
       song1.pause();
       timer++; //multiply is *
       if (timer > 5 * 40) {
@@ -70,7 +68,7 @@ function draw() {
 
     case 5:
       image(img4, width / 2, height / 2, 1000, 800);
-
+      text("case 3", 250, 250);
       song1.pause();
       if (vol > .02) {
         state = 6
@@ -81,7 +79,7 @@ function draw() {
       break;
     case 6:
       image(img6, width / 2, height / 2, 1000, 800);
-
+      text("case 4", 250, 250);
       state = 6
       //https://www.youtube.com/watch?v=40Me1-yAtTc
       if (!song1.isPlaying()) {
@@ -100,7 +98,7 @@ function mouseReleased() {
 
   state++; // state= state+1
   if (state > 6) {
-    state = 0;
+     state = 0;
   }
 
 }
