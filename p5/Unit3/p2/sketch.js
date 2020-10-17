@@ -1,0 +1,54 @@
+let cars = []
+
+function setup() {
+  createCanvas(800, 800);
+  //for (let i = 0; i < 20; i++) // no ;
+  //{
+  //cars.push(new Car());
+  //}
+  noStroke();
+}
+
+function draw() {
+  background("grey")
+  cars.push(new Car());
+  for (let i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].move();
+    if (cars[i].a <= 0){
+      cars.splice(i,1);
+    }
+  }
+}
+// can make multiple
+
+class Car {
+  //inatlizes everything or make it runs
+  constructor() {
+    //attributes
+    //this particular x blongs to this car
+    this.pos = createVector(0, 0, 0);
+    this.vel = createVector(random(10), random(10));
+    this.r = random(255);
+    this.g = random(255);
+    this.b = random(255);
+    this.a = random(255);
+    this.s = random (5,20);
+
+  }
+  //methods
+
+  display() {
+    fill(this.r, this.g, this.b, this.a, this.s);
+    ellipse(this.pos.x, this.pos.y, 20);
+
+  }
+  move() {
+    this.pos.add(this.vel);
+    this.a = this.a -5;
+    //if (this.pos.x > width) this.pos.x = 0;
+    //if (this.pos.x < 0) this.pos.x = width;
+    //if (this.pos.y > height) this.pos.y = 0;
+    //if (this.pos.y < 0) this.pos.y = height;
+  }
+}
