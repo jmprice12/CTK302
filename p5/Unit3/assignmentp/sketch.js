@@ -6,7 +6,7 @@ function setup() {
   createCanvas(600, 600);
   img1 = loadImage("assets/h.jpg");
   imageMode(CENTER);
-  
+
 
 }
 
