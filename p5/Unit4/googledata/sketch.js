@@ -87,8 +87,8 @@ class Bubble {
     text(this.tv, this.pos.x, this.pos.y + 16);
   }
   drive() {
-    this.pos.x += 3;
-    if (this.pos.x > width) this.pos.x = 0;
+    this.pos.y += 3;
+    if (this.pos.y > width) this.pos.y = 0;
   }
 
 }
