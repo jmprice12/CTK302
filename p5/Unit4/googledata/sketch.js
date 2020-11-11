@@ -1,13 +1,14 @@
 var bubbles = [];
 var img1, img2;
-var sound1;
+var song;
 
 function preload() {
-  song1 = loadSound("assets/m.mp3");
+  song = loadSound("assets/m.mp3");
+
 }
 
 function setup() {
-
+  song.play();
 
   // Tabletop stuff, for getting google spreadsheet data in.
   let url = '15M21Jf_N8Nrnm8JLstzk1dpyBWssjd1QXe_9I1GcJdY';
@@ -25,7 +26,7 @@ function setup() {
   // Regular setup code we usually have
   createCanvas(800, 800);
   // images game from google images
-  img1 = loadImage("assets/b.png");
+  img1 = loadImage("assets/nb.png");
   img2 = loadImage("assets/t.png");
 
   textAlign(CENTER);
@@ -33,7 +34,8 @@ function setup() {
   //ellipseMode(CENTER);
   //rectMode(CENTER);
   //https://www.bensound.com/royalty-free-music/track/the-elevator-bossa-nova
-  song1.play();
+
+
 
 }
 
@@ -52,8 +54,12 @@ function gotData(data) {
 
 
 function draw() {
-  //background("red")
+
+  fill("#B80103");
   image(img1, width / 2, height / 2);
+
+
+
 
 
   // // iterate through the bubbles and display the objects!
@@ -91,7 +97,13 @@ class Bubble {
     if (this.pos.y > width) this.pos.y = 0;
   }
 
+
+
+
 }
+
+
+
 function touchStarted() {
   getAudioContext().resume();
 }
