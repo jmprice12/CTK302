@@ -89,7 +89,7 @@ function draw() {
   textFont(f);
   textSize(40);
   textAlign(CENTER);
-  text("Catch A Falling Star", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Catch A Falling Star", width/2, height/2);
 
 
   // Debugging information -- take this out when you're ready for production!
