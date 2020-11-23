@@ -15,7 +15,7 @@ var song1;
 function preload() {
   song1 = loadSound("assets/m.m4a");
   song1.loop();
-  song1.pause();
+  song1.play();
 }
 
 
