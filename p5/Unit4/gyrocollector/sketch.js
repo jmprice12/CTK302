@@ -1,4 +1,3 @@
-// variables needed for gyroscope
 var beta, gamma; // orientation data
 var x = 0; // acceleration data
 var y = 0;
@@ -14,8 +13,7 @@ var song1;
 
 function preload() {
   song1 = loadSound("assets/m.m4a");
-  song1.loop();
-  song1.play();
+
 }
 
 
@@ -24,7 +22,7 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  f=loadFont("assets/mf.ttf");
+  f = loadFont("assets/mf.ttf");
   // initialize accelerometer variables
   alpha = 0;
   beta = 0;
@@ -162,8 +160,8 @@ function Car() {
     // maybe use an image here instead!
     //fill(this.r, this.g, this.b, this.a);
     image(img1, this.pos.x - 50, this.pos.y, 50, 50);
-    image(img2,this.pos.x + 50, this.pos.y, 50, 50);
-    image(img4,this.pos.x + 17, this.pos.y - 30, 50, 50);
+    image(img2, this.pos.x + 50, this.pos.y, 50, 50);
+    image(img4, this.pos.x + 17, this.pos.y - 30, 50, 50);
 
   }
 
@@ -178,6 +176,6 @@ function Car() {
   }
 
 }
-function() {
+function touchStarted() {
   getAudioContext().resume();
 }
