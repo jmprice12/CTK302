@@ -17,7 +17,7 @@ function setup() {
   bunnyImage = loadImage("assets/wa.png");
   imageMode(CENTER);
   rectMode(CENTER);
-  f=loadFont("assets/db.ttf");
+  f=loadFont("assets/db2.otf");
 
 }
 
