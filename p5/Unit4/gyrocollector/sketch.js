@@ -9,13 +9,22 @@ var yPosition = 0;
 var img1, img2, img3, img4;
 var cars = [];
 var frogPos;
+var f;
+var song1;
+
+function preload() {
+  song1 = loadSound("assets/m.m4a");
+  song1.loop();
+  song1.pause();
+}
 
 
 function setup() {
+  song1.play();
 
   createCanvas(windowWidth, windowHeight);
 
-
+  f=loadFont("assets/mf.ttf");
   // initialize accelerometer variables
   alpha = 0;
   beta = 0;
@@ -58,9 +67,9 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(img1, 0, 0, 500, 500);
-  fill('green');
-  ellipse(0, 0, 80, 80);
+  image(img3, 0, 0, 250, 250);
+  //fill('green');
+  //ellipse(0, 0, 80, 80);
   pop();
 
 
@@ -79,9 +88,10 @@ function draw() {
 
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
-  textSize(40);
+  textFont(f);
+  textSize(80);
   textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Catch A Falling Star", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -150,10 +160,10 @@ function Car() {
   this.display = function() {
 
     // maybe use an image here instead!
-    fill(this.r, this.g, this.b, this.a);
-    image(img2, this.pos.x - 50, this.pos.y, 50, 50);
-    image(img3,this.pos.x + 50, this.pos.y, 50, 50);
-    image(img4,this.pos.x + 17, this.pos.y - 30, 80, 60);
+    //fill(this.r, this.g, this.b, this.a);
+    image(img1, this.pos.x - 50, this.pos.y, 50, 50);
+    image(img2,this.pos.x + 50, this.pos.y, 50, 50);
+    image(img4,this.pos.x + 17, this.pos.y - 30, 50, 50);
 
   }
 
@@ -167,4 +177,7 @@ function Car() {
 
   }
 
+}
+function() {
+  getAudioContext().resume();
 }
