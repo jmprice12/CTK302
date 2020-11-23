@@ -5,9 +5,8 @@ var y = 0;
 var z = 0;
 var xPosition = 0;
 var yPosition = 0;
-var img1, img2, img3,img4;
 
-// var bunnyImage;
+var img1, img2, img3, img4;
 var cars = [];
 var frogPos;
 
@@ -15,10 +14,7 @@ var frogPos;
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-  img1 = loadImage("assets/s1.png");
-  img2 = loadImage("assets/s2.png");
-  img3 = loadImage("assets/s3.png");
-  img4 = loadImage("assets/s4.png");
+
 
   // initialize accelerometer variables
   alpha = 0;
@@ -35,7 +31,11 @@ function setup() {
   frogPos = createVector(width / 2, height - 80);
 
   // load any images you need
-  //bunnyImage = loadImage("assets/bunny.jpg");
+  img1 = loadImage("assets/s1.png");
+  img2 = loadImage("assets/s2.png");
+  img3 = loadImage("assets/s3.png");
+  img4 = loadImage("assets/s4.png");
+  //bunnyImage = loadImage("assets/s1.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -43,7 +43,7 @@ function setup() {
 
 function draw() {
 
-  background('#273a59'); // light blue
+  background('#c6f5ff'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -81,7 +81,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("Catch A Falling Star and Put It In Your Pocket", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -143,7 +143,7 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
-  this.a = random(255);  // alpha opacity value for fill!
+  this.a = random(255); // alpha opacity value for fill!
 
 
   // methods
@@ -152,8 +152,8 @@ function Car() {
     // maybe use an image here instead!
     fill(this.r, this.g, this.b, this.a);
     image(img2, this.pos.x - 50, this.pos.y, 50, 50);
-    image(img3, this.pos.x + 50, this.pos.y, 50, 50);
-    image(img4, pos.x + 17, this.pos.y - 30, 80, 60) ;
+    image(img3,this.pos.x + 50, this.pos.y, 50, 50);
+    image(img4,this.pos.x + 17, this.pos.y - 30, 80, 60);
 
   }
 
