@@ -62,7 +62,7 @@ function draw() {
   fill('white');
   textFont(f);
   noStroke();
-  textSize(100);
+  textSize(50);
   textAlign(CENTER);
   text("don't blink ", width / 2, height / 2);
 
