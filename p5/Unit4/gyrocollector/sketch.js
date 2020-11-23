@@ -87,7 +87,7 @@ function draw() {
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
   textFont(f);
-  textSize(20);
+  textSize(40);
   textAlign(CENTER);
   text("Catch A Falling Star", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
